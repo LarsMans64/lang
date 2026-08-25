@@ -14,7 +14,7 @@ interface Hardware {
 
 export function initHardware(): Hardware {
     const heap = [];
-    for (let i = 0; i < 64; i++) {
+    for (let i = 0; i < 32; i++) {
         heap[i] = 0;
     }
     return {
@@ -25,7 +25,7 @@ export function initHardware(): Hardware {
     }
 }
 
-export async function executeProgram(program: Program, hardware: Hardware, logger: (s: string) => void) {
+export async function executeProgram(program: Program, hardware: Hardware, logger: (s: string) => void, cooldown: MaybeRef<number>) {
     while (true) {
         const instruction = program.instructions[hardware.programCounter];
         if (!instruction) {
@@ -36,7 +36,7 @@ export async function executeProgram(program: Program, hardware: Hardware, logge
 
         hardware.programCounter++;
 
-        await sleep(50);
+        await sleep(unref(cooldown));
     }
 
 
@@ -103,6 +103,10 @@ export async function executeProgram(program: Program, hardware: Hardware, logge
             case "nor": return val1 == 0 || val2 == 0 ? 1 : 0;
             case "xor": return (val1 == 0) != (val2 == 0) ? 1 : 0;
             case "xnor": return (val1 == 0) == (val2 == 0) ? 1 : 0;
+            case "shl": return val1 << val2;
+            case "shr": return val1 >> val2;
+            case "band": return val1 & val2;
+            case "bor": return val1 | val2;
         }
     }
 

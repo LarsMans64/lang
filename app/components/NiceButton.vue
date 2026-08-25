@@ -28,6 +28,11 @@ button {
     background: var(--col-text);
     color: var(--col-bg);
     font-weight: bold;
+
+    &:hover {
+      /*color: var(--col-bg-lighter);*/
+      background: white;
+    }
   }
 }
 </style>

@@ -9,7 +9,7 @@ defineProps<{
   <div class="table">
     <div v-for="(value, i) in values" class="table-item">
       <div class="title">{{titles?.[i] ?? i}}</div>
-      <div class="value" :class="{dark: value == 0}">{{value}}</div>
+      <div class="value" :class="{dark: value === 0}">{{value}}</div>
     </div>
   </div>
 </template>

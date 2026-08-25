@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
-    --col-text: #eff3f3;
-    --col-text-light: #c6cfcf;
-    --col-text-lighter: #9ba6a6;
+    --col-text: #e2e6e6;
+    --col-text-light: #b4bcbc;
+    --col-text-lighter: #899393;
 
-    --col-bg-lighter: #52535a;
-    --col-bg-light: #3f4047;
-    --col-bg: #26272c;
-    --col-bg-dark: #15181b;
+    --col-bg-lighter: #575a68;
+    --col-bg-light: #383a49;
+    --col-bg: #23242e;
+    --col-bg-dark: #161620;
 
-    --radius: 7px;
+    --radius: 15px;
     --spacing: 10px;
 }
 

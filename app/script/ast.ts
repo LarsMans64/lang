@@ -13,7 +13,7 @@ export interface Computation {
     toRegister: number
 }
 
-export type ComputationType = "add" | "sub" | "mul" | "eq" | "neq" | "gt" | "lt" | "gte" | "lte" | "and" | "nand" | "or" | "nor" | "xor" | "xnor";
+export type ComputationType = "add" | "sub" | "mul" | "eq" | "neq" | "gt" | "lt" | "gte" | "lte" | "and" | "nand" | "or" | "nor" | "xor" | "xnor" | "shl" | "shr" | "band" | "bor";
 
 export interface Move {
     type: "move"

@@ -48,7 +48,7 @@ function parseInstruction(instruction: string): Instruction {
     return {type: "no-operation"};
 }
 
-const computationHeaders: string[] = ["add", "sub", "mul", "eq", "neq", "gt", "lt", "gte", "lte", "and", "nand", "or", "nor", "xor", "xnor"];
+const computationHeaders: string[] = ["add", "sub", "mul", "eq", "neq", "gt", "lt", "gte", "lte", "and", "nand", "or", "nor", "xor", "xnor", "shl", "shr", "band", "bor"];
 
 function parseValue(value: string): Value {
     const register = parseRegister(value);
