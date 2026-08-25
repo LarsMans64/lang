@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+    --col-text: #eff3f3;
+    --col-text-light: #c6cfcf;
+    --col-text-lighter: #9ba6a6;
+
+    --col-bg-lighter: #52535a;
+    --col-bg-light: #3f4047;
+    --col-bg: #26272c;
+    --col-bg-dark: #15181b;
+
+    --radius: 7px;
+    --spacing: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    transition-behavior: allow-discrete;
+}
+
+html {
+    background: var(--col-bg);
+    color-scheme: dark;
+    font-family: "Fira Code", monospace;
+    color: var(--col-text);
+}
+
+body {
+    margin: 0;
+}
+
+textarea, button, input {
+    font-family: inherit;
+    color: inherit;
+}
+
+hr {
+    margin: 1rem 0;
+    border-color: var(--col-bg-light);
+}
