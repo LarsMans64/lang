@@ -16,7 +16,7 @@ jobs:
           node-version: "24"
       # Pick your own package manager and build script
       - run: npm install
-      - run: NUXT_APP_BASE_URL=https://larsmans.nl/lang/ npx nuxt build --preset github_pages
+      - run: NUXT_APP_BASE_URL=https://larsmans64.github.io/lang/ npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
